@@ -29,4 +29,30 @@ class HolbertonCourse {
     get students() {
         return this._students;
     }
+
+    set name(name){
+        if (typeof newName !== 'string') {
+            throw new TypeError('Name must be a string');
+        }
+        this._name = name;
+    }
+
+    set length(length){
+        if (typeof newLength !== 'number') {
+            throw new TypeError('Length must be a number');
+        }
+        this._length = length;
+    }
+
+    set students(students){
+        if (!Array.isArray(newStudents)) {
+            throw new TypeError('Students must be an array');
+        }
+        this.students.forEach((student) => {
+            if (typeof student !== 'string') {
+              throw new TypeError('Students must be an array of strings');
+            }
+        });
+        this._students = students;
+    }
 }
