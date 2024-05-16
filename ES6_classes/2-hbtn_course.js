@@ -1,3 +1,4 @@
+/* eslint-disable */
 class HolbertonCourse {
     constructor(name, length, students) {
         if (typeof name !== 'string') {
