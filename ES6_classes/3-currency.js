@@ -1,26 +1,27 @@
 /* eslint-disable */
 export default class Currency {
-    constructor(name, code) {
-        this._name = name;
-        this._code = code;
+    constructor(code, name) {
+      this._code = code;
+      this._name = name;
     }
-    get name() {
-        return this._name;
-    }
-
+  
     get code() {
-        return this._code;
+      return this._code;
     }
-    set name(name){
-        this._name = name;
+  
+    get name() {
+      return this._name;
     }
-
-    set code(code){
-        this._code = code;
+  
+    set code(newCode) {
+      this._code = newCode;
     }
-    
-    displayFullCurrency(){
-        return `${this.name} (${this.code})`;
+  
+    set name(newName) {
+      this._name = newName;
     }
-
-}
+  
+    displayFullCurrency() {
+      return `${this.name} (${this.code})`;
+    }
+  }
